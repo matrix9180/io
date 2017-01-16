@@ -1,0 +1,16 @@
+@import "custom";
+@import "bootstrap";
+body {
+  font-family: $font-family-monospace;
+}
+#header {}
+#main {
+  text-align: center;
+  @extend .container-fluid;
+}
+#footer {
+  text-align: center;
+  @extend .container-fluid;
+  @extend .fixed-bottom;
+  @extend .bg-faded;
+}

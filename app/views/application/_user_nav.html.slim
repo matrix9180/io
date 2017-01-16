@@ -1,0 +1,17 @@
+li#userNav.nav-item.dropdown
+  = link_to('Account', nil, class: 'nav-link dropdown-toggle', id: 'myAccountDropdownMenuLink', data: {toggle: 'dropdown'}, aria: {haspopup: true, expanded: false} )
+  .dropdown-menu.dropdown-menu-right aria-labelledby="myAccountDropdownMenuLink"
+    - unless signed_in?
+      = link_to('Log In', new_user_session_url, class: 'dropdown-item')
+      = link_to('Sign Up', new_user_registration_url, class: 'dropdown-item')
+    - else
+      .dropdown-header
+        | Signed in as
+        br
+        strong
+          = current_user.d_name
+      .dropdown-divider
+      = link_to('Your Profile', user_url(current_user), class: 'dropdown-item')
+      .dropdown-divider
+      = link_to('Edit Profile', edit_me_url, class: 'dropdown-item')
+      = link_to('Log Out', destroy_user_session_url, method: :delete, class: 'dropdown-item')

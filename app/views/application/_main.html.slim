@@ -1,0 +1,2 @@
+div class="#{controller.controller_name} #{controller.action_name}" id="#{[controller.controller_name, controller.action_name, params[:id]].compact.join('-')}"
+  = yield

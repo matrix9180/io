@@ -1,0 +1,7 @@
+- if flash.any?
+  #flash.container
+    - flash.each do |k,v|
+      .flash class="flash-#{k} alert #{bootstrap_class_for(k)} alert-dismissable fade show" role="alert"
+        button type="button" class="close" data-dismiss="alert" aria-label="Close"
+          span aria-hidden="true" &times;
+        = v

@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= t(:brand)
+    = csrf_meta_tags
+    meta name="repo-url" content="https://github.com/matrix9180/io/tree/#{ENV.fetch("HEROKU_SLUG_COMMIT")}"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    header#header
+      = render 'header'
+    = render 'flash'
+    main#main
+      = render 'main'
+    footer#footer
+      = render 'footer'
