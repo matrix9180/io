@@ -4,6 +4,7 @@ html
     title= t(:brand)
     = csrf_meta_tags
     meta name="repo-url" content="https://github.com/matrix9180/io/tree/#{ENV.fetch("HEROKU_SLUG_COMMIT") { "master" } }"
+    = favicon_link_tag('favicon-32.png')
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
