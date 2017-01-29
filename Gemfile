@@ -37,6 +37,8 @@ gem 'devise'
 gem 'pundit'
 gem 'rails-assets-tether', source: 'https://rails-assets.org'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'kramdown'
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'

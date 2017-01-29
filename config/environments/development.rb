@@ -1,5 +1,7 @@
+
 Rails.application.configure do
-  config.action_mailer.default_url_options = {host: 'matrix9180-io.dev'}
+  config.action_mailer.default_url_options = {host: 'matrix9180.io.dev'}
+  config.action_controller.default_url_options = config.action_mailer.default_url_options
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

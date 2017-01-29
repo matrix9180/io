@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
 
   root to: "high_voltage/pages#show", id: "root"

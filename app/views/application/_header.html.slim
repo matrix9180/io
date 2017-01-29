@@ -3,7 +3,8 @@ nav.navbar.navbar-toggleable.navbar-dark.bg-faded
       span.navbar-toggler-icon
     =link_to(t(:brand), root_url, class: 'navbar-brand')
     #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
+      //ul.navbar-nav.mr-auto
       //  = navbar_link_to('Home', root_url)
-      //ul.navbar-nav.ml-auto
-      //  = render 'user_nav'
+      - if subdomain=='admin'
+        ul.navbar-nav.ml-auto
+          = render 'user_nav'
